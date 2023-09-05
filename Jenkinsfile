@@ -16,7 +16,7 @@ pipeline {
             steps {
                 archiveArtifacts artifacts: '**/target/*.jar',
                                  onlyIfSuccessful: true
-                jnuit testResults: '**/surefire-reports/TEST-*.xml',
+                junit testResults: '**/surefire-reports/TEST-*.xml',
                       allowEmptyResults: false
             }
         }
